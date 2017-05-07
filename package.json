@@ -8,7 +8,8 @@
   },
   "dependencies": {
     "react": "16.0.0-alpha.6",
-    "react-native": "0.44.0"
+    "react-native": "0.44.0",
+    "react-native-clean-form": "^0.4.1"
   },
   "devDependencies": {
     "babel-jest": "19.0.0",
@@ -17,7 +18,9 @@
     "react-redux": "^5.0.4",
     "react-test-renderer": "16.0.0-alpha.6",
     "redux": "^3.6.0",
-    "redux-form": "^6.6.3"
+    "redux-form": "^6.6.3",
+    "redux-immutable": "^4.0.0",
+    "redux-immutablejs": "0.0.8"
   },
   "jest": {
     "preset": "react-native"

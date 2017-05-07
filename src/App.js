@@ -4,7 +4,7 @@ import  store  from './store';
 
 //COMPONENTS
 
-import Form from './windows/contactPage';
+import FormView from './windows/contactPage';
 
 /**
  * MAIN COMPONENT - APP
@@ -14,7 +14,7 @@ class App extends React.Component{
     render(){
         return(
 		<Provider store={store}>
-            <Form/>
+            <FormView/>
 		</Provider>
         );
     }
