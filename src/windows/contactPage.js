@@ -9,7 +9,6 @@ import {
 } from 'react-native'
 
  // passing values into validation function
- 
 const validate = values => {
   const errors = {}
   if (!values.username) {
@@ -60,7 +59,8 @@ const renderInput = ({ input: { onChange, ...restInput }, firstProp, secondProp,
 
 const Form = props => {
 
-  const { handleSubmit } = props
+const { handleSubmit, pristine, reset, submitting } = props
+//  const { handleSubmit } = props
 
   return (
     <View style={styles.container}>
@@ -74,8 +74,12 @@ const Form = props => {
       <Text>Age:</Text>
       <Field name="age" component={renderInput} />
 
-      <TouchableOpacity onPress={handleSubmit(submit)}>
+      <TouchableOpacity disabled={submitting} onPress={handleSubmit(submit)}>
         <Text style={styles.button}>Submit</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity disabled={pristine || submitting} onPress={reset}>
+        <Text style={styles.button}>Clear Values</Text>
       </TouchableOpacity>
     </View>
   )
